@@ -23,11 +23,13 @@ const darkTheme = {
   body: "#1c1c1c",
   title: "#fff",
   subtitle: "#b6b6b6",
+  icon: "#fff",
 }
 const lightTheme = {
   body: "#fff",
   title: "#000",
   subtitle: "#000",
+  icon: "#000",
 }
 
 function App() {
@@ -43,7 +45,7 @@ function App() {
     <ThemeProvider theme={isDarkTheme ? darkTheme: lightTheme}>
       <StyledApp>
         <SunIcon />
-        <Switch toggleTheme={toggleTheme}/>
+        <Switch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}/>
         <MoonIcon />
         <Name color="red">Michael Rodriguez</Name>
         <Info>Username: IngNex</Info>

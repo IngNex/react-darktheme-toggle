@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Switch.css";
 
-function Switch({toggleTheme}) {
-  const [isToggled, setIsToggled] = useState(false);
+function Switch({toggleTheme, isDarkTheme}) {
+  const [isToggled, setIsToggled] = useState(isDarkTheme);
 
   const onToggle = () => {
     setIsToggled(!isToggled);
