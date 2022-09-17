@@ -1,24 +1,26 @@
+import styled from "styled-components";
 import MoonIcon from "./components/icons/MoonIcon";
 import SunIcon from "./components/icons/SunIcon";
 import Switch from "./components/Switch";
 
-const style = {
-  minHeight: "100vh",
-  textAlign: "center",
-  paddingTop: "10rem",
-  backgroundColor: "#f5f5f5",
-};
+
+const StyledApp = styled.div`
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10rem;
+  background-color: #f5f5f5;
+`
 
 function App() {
   return (
-    <div style={style}>
+    <StyledApp>
       <SunIcon />
       <Switch />
       <MoonIcon />
-      <h1>Jim Naysium</h1>
-      <p>Username: Michael Rodriguez</p>
+      <h1>Michael Rodriguez</h1>
+      <p>Username: IngNex</p>
       <p>Email: ingnexmaicol14@gmail.com</p>
-    </div>
+    </StyledApp>
   );
 }
 
