@@ -45,6 +45,7 @@ function App() {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme: lightTheme}>
       <StyledApp>
+        <Name color="red">Theme light and dark</Name>
         <SunIcon />
         <Switch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}/>
         <MoonIcon />
