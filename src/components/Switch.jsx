@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Switch.css";
 
-function Switch() {
+function Switch({toggleTheme}) {
   const [isToggled, setIsToggled] = useState(false);
 
   const onToggle = () => {
     setIsToggled(!isToggled);
+    toggleTheme();
   };
 
   return (

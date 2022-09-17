@@ -32,14 +32,18 @@ const lightTheme = {
 
 function App() {
 
-  const [theme, useTheme] = useState("light");
-  const isDarkTheme = theme === "light";
+  const [theme, setTheme] = useState("light");
+  const isDarkTheme = theme === "dark";
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? 'light' : 'dark');
+  }
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme: lightTheme}>
       <StyledApp>
         <SunIcon />
-        <Switch />
+        <Switch toggleTheme={toggleTheme}/>
         <MoonIcon />
         <Name color="red">Michael Rodriguez</Name>
         <Info>Username: IngNex</Info>
